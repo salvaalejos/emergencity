@@ -1,0 +1,129 @@
+/* === RESETEO === */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === GENERAL === */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #1B4458;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  height: 55px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+   border-bottom-left-radius: 15px; 
+  border-bottom-right-radius: 15px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.4rem;
+}
+
+/* === CONTENIDO PRINCIPAL === */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* === MAPA === */
+.map-container {
+  flex: 1;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+/* === PANEL LATERAL === */
+.side-panel {
+  position: fixed;
+  top: 85px;
+  right: 10px;
+  bottom: 10px;
+  width: 320px;
+  background: #f3f5f6;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateX(110%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000; /* Asegura que se muestre por encima del mapa */
+}
+
+.side-panel.open {
+  transform: translateX(0);
+}
+
+.vehicle-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  color: #0d2f45;
+  text-align: center;
+}
+
+.vehicle-info hr {
+  border: none;
+  border-top: 2px solid #0d2f45;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.vehicle-info p {
+  margin: 0.4rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.no-selection {
+  color: #777;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+button {
+  margin-top: 1rem;
+  background: #0d2f45;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #144d6f;
+}
